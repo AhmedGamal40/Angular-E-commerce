@@ -1,0 +1,11 @@
+<div class="card m-2" style="width: 25rem;">
+    <img [src]="product.imgURL" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{product.name | uppercase}}</h5>
+        <div class="flex ">
+            <p class="card-text">{{product.price | currency:'USD':'symbol'}}</p>
+            <p class="card-text">{{product.quality}}</p>
+        </div>
+        <a [routerLink]="['/Product-Details', product.id]" class="btn btn-primary">Show Details</a>
+    </div>
+</div>
